@@ -79,7 +79,7 @@ else:
 
 # get version from package
 pkg_file= os.path.join(os.path.split(__file__)[0], 'pdfparser', '__init__.py')
-m=re.search(r"__version__\s*=\s*'([\d.]+)'", file(pkg_file).read())
+m=re.search(r"__version__\s*=\s*'([\d.]+)'", open(pkg_file).read())
 if not m:
     print >>sys.stderr, 'Cannot find version of package'
     sys.exit(1)
